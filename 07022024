@@ -1,0 +1,1 @@
+ansible -i /inventory all -m shell -a "nohup bash -c 'uname -a | awk \\'{ if (\\$3 ~ /118/) print \\\$2 }\\' >> /path/to/output_file &' > /dev/null 2>&1 &" -f 40 -vv
